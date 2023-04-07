@@ -12,7 +12,7 @@ Television.hasMany(Categories, {
 });
 
 Movie.belongsToMany(Categories,{
-    through: ,
+    through: '',
     as: '',
     foreignKey: '',
 });
