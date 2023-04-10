@@ -1,5 +1,4 @@
 const Movie = require('./Movie');
-const Television = require('./Television');
 const Categories = require('./Categories')
 const User = require('./User');
 const Review = require('./Review');
@@ -8,9 +7,6 @@ Movie.belongsTo(User, {
     foreignKey:'userId',
 });
 
-Television.hasMany(Categories, {
-    foreignKey: '',
-});
 
 Movie.belongsToMany(Categories,{
     through: '',
@@ -37,7 +33,7 @@ Review.belongsTo(Movie, {
 
 module.exports = {
     Movie,
-    Television,
+    Review,
     Categories,
     User,
 };

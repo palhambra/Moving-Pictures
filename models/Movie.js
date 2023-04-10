@@ -1,4 +1,4 @@
-const  { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 // const { promises } = require('dns');
@@ -8,7 +8,7 @@ class Movies extends Model {}
 Movies.init(
     {
         id: {
-            type:DataTypes.INTEGER,
+            type:DataTypes.INTERGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
