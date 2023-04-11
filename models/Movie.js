@@ -3,12 +3,12 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // const { promises } = require('dns');
 
-class Movies extends Model {}
+class Movie extends Model {}
 
-Movies.init(
+Movie.init(
     {
         id: {
-            type:DataTypes.INTERGER,
+            type:DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
@@ -27,8 +27,8 @@ Movies.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'movies',
+        modelName: 'movie',
     }
 );
 
-module.exports = Movies;
+module.exports = Movie;
