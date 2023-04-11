@@ -14,17 +14,18 @@
     "start": "node server.js"
   },
   "name": "moving-pictures",
-  "description": "",
+  "description": "MVC Handlebars and MYSQL",
   "version": "1.0.0",
   "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/palhambra/Moving-Pictures.git"
   },
-  "author": "",
+  "author": "Frank",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/palhambra/Moving-Pictures/issues"
   },
-  "homepage": "https://github.com/palhambra/Moving-Pictures#readme"
+  "homepage": "https://github.com/palhambra/Moving-Pictures#readme",
+  "devDependencies": {}
 }
