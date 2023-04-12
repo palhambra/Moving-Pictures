@@ -1,13 +1,21 @@
 const router = require('express').Router();
 // const { User } = require('../models');
-// const { Instrument }
+const { Instrument } = require('../models');
 // const withAuth = require('../utils/auth');
 
-// router.get('/', async (req, res) => {
-//   try {
-//     const instrumentData = await Instrument.
-//   }
-// })
+router.get('/', async (req, res) => {
+  try {
+    const instrumentData = await Instrument.findAll();
+
+    const instruments = instrumentData.map((instrument) => instrument.get({ plain:true }));
+
+    res.render('homepage', {
+      instruments
+    });
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
 
 router.get('/login', (req, res) => {
  

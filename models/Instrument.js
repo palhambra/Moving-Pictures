@@ -5,7 +5,7 @@ const sequelize = require('../config/connection');
 
 class Instrument extends Model {}
 
-Movie.init(
+Instrument.init(
     {
         id: {
             type:DataTypes.INTEGER,
