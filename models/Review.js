@@ -25,6 +25,13 @@ Review.init(
         key: 'id'
       }
     },
+    instrument_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'instrument',
+        key: 'id'
+      }
+    }
   }, 
   {
     sequelize,

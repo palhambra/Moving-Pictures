@@ -7,6 +7,7 @@ router.get('/', async (req, res) => {
         res.json(categories);
     } catch (err) {
         res.status(500).json(err)
+        console.log(err)
     }
 });
 

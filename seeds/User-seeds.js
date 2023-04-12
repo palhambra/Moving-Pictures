@@ -1,10 +1,4 @@
-const sequelize = require('../config/connection');
-
 const { User } = require('../models');
-
-const seedUsers = async () => {
-    await sequelize.sync({ force: true });
-
     const userData = [
         {
             name: 'Frank',
@@ -22,12 +16,5 @@ const seedUsers = async () => {
             password: 'hij456',
         },
     ];
-
-    for (const user of userData) {
-        await User.create(user);
-    }
-
-    process.exit(0);
-};
-
-seedUsers();
+const seedUsers = () => User.bulkCreate(userData);
+module.exports = seedUsers;

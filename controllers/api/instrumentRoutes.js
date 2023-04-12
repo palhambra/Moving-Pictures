@@ -1,14 +1,15 @@
 const router = require('express').Router();
-const { Instrument, Category, User, Review } = require('../../models');
+const { Instrument, Categories, User, Review } = require('../../models');
 
 router.get('/', async (req, res) => {
  try {
   const instrumentData = await Instrument.findAll({
-    include: [{model: Category}, {model: Review, include: [User]}],
+    include: [{model: Categories}, {model: Review, include: [User]}],
   });
   res.status(200).json(instrumentData)
  } catch (err) {
   res.status(500).json(err);
+  console.log(err)
  }
 });
 
