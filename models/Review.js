@@ -11,22 +11,11 @@ Review.init(
       primaryKey: true,
       autoIncrement: true
     },
-    description: {
+    comment: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
-      }
-    },
-    rating: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    movie_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'movie',
-        key: 'id'
       }
     },
     user_id: {

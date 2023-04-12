@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // const { promises } = require('dns');
 
-class Movie extends Model {}
+class Instrument extends Model {}
 
 Movie.init(
     {
@@ -13,13 +13,31 @@ Movie.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name : {
+        product_name : {
             type:DataTypes.STRING,
             allowNull: false,
         },
-        genre : {
-            type:DataTypes.STRING,
+        price : {
+            type:DataTypes.DECIMAL(10,2),
             allowNull: false,
+            validate: {
+                isDecimal: true,
+            },
+        },
+        stock: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0,
+            validate: {
+                isNumeric: true,
+            },
+        },
+        category_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'category',
+                key: 'id',
+            },
         },
     },
     {
@@ -31,4 +49,4 @@ Movie.init(
     }
 );
 
-module.exports = Movie;
+module.exports = Instrument;
