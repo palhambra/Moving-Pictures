@@ -35,7 +35,7 @@ Instrument.init(
         category_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'category',
+                model: 'categories',
                 key: 'id',
             },
         },
@@ -45,7 +45,7 @@ Instrument.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'movie',
+        modelName: 'instrument',
     }
 );
 
