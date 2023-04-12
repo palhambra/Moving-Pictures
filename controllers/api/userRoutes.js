@@ -53,4 +53,11 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// get all users
+router.get('/', async (req, res) => {
+  try userData = await User.findAll({
+    
+  })
+})
+
 module.exports = router;
