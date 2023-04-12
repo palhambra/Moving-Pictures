@@ -35,7 +35,7 @@ Instrument.init(
         category_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'category',
+                model: 'categories',
                 key: 'id',
             },
         },

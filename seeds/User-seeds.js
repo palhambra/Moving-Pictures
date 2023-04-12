@@ -2,7 +2,7 @@ const sequelize = require('../config/connection');
 
 const { User } = require('../models');
 
-const seedDatabase = async () => {
+const seedUsers = async () => {
     await sequelize.sync({ force: true });
 
     const userData = [
@@ -30,4 +30,4 @@ const seedDatabase = async () => {
     process.exit(0);
 };
 
-seedDatabase();
+seedUsers();
