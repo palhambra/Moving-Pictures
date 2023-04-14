@@ -4,7 +4,7 @@ const { Instrument, Categories, User, Review } = require('../../models');
 const multer = require('multer');
 const sharp = require('sharp');
 
-// const upload = multer({ dest: path.join(__dirname, '..', 'public', 'images') });
+
 const upload = multer({ dest: 'public/images' });
 
 const fs = require('fs');
@@ -61,55 +61,7 @@ router.get('/:id', async (req, res) => {
 //     });
 // });
 
-// router.post('/',  upload.single('image'), async (req, res) => {
-//   try { 
-//     console.log(req.body)
-//     console.log(req.file)
-//     const image = req.file.filename
-//     const instrument = await Instrument.create({
-      
-//       product_name: req.body.product_name,
-//       price: req.body.price,
-//       stock: req.body.stock,
-//       category_id: req.body.category_id,
-//       image: req.file.filename,
-//     });
 
-//     const newPath = 'public/images/' + image;
-//     fs.renameSync(req.file.path, newPath)
-//     console.log(instrument)
-//     res.status(201).json(instrument);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ message: 'Server error' });
-//   }
-// });
-
-// router.post('/',  upload.single('image'), async (req, res) => {
-//   try { 
-//     console.log(req.body)
-//     console.log(req.file)
-//     const image = req.file.filename
-//     const imagePath = path.join(__dirname, '..', 'public', 'images', image);
-//     await sharp(req.file.path).jpeg().toFile(imagePath);
-//     const instrument = await Instrument.create({
-      
-//       product_name: req.body.product_name,
-//       price: req.body.price,
-//       stock: req.body.stock,
-//       category_id: req.body.category_id,
-//       image: req.file.filename,
-//     });
-
-//     const newPath = 'public/images/' + image;
-//     fs.renameSync(req.file.path, newPath)
-//     console.log(instrument)
-//     res.status(201).json(instrument);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ message: 'Server error' });
-//   }
-// });
 
 router.post('/', upload.single('image'), async (req, res) => {
   try { 
