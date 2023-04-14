@@ -34,14 +34,16 @@
 
 
 
-{{#each instruments}}
+{{#each instruments as |instrument|}}
   <div>
-    <h2>{{this.product_name}}</h2>
-    <p>Price: {{this.price}}</p>
-    <p>Stock: {{this.stock}}</p>
-    <img src="/images/{{this.image}}" alt="{{this.product_name}} Image" width="300" height="600">
+    <h2>{{instrument.product_name}}</h2>
+       
+    <a href="/profile/{{instrument.id}}">
+      <img src="/images/{{instrument.image}}" alt="{{instrument.product_name}} Image" width="300" height="600">
+    </a>
   </div>
 {{/each}}
+
 
 
 

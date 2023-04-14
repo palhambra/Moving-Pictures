@@ -41,7 +41,11 @@ Instrument.init(
         },
         image: {
             type: DataTypes.STRING
-    }
+    },
+    description : {
+        type:DataTypes.TEXT,
+        allowNull: false,
+    },
     },
     {
         sequelize,
