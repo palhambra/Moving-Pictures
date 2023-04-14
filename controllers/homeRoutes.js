@@ -48,6 +48,8 @@ router.get('/upload', async (req, res) => {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
+} else {
+  res.render('login', { message: 'You must be logged in to upload instruments' });
 }
 });
 
