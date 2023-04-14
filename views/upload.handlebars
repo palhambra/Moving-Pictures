@@ -24,7 +24,7 @@
   <div class="col-md-6">
     <h2>New Instrument</h2>
 
-    <form class="form new-instrument-form">
+    <form class="form new-instrument-form" enctype="multipart/form-data">
       <div class="form-group">
         <label for="product_name">Instrument:</label>
         <input class="form-input" type="text" id="product_name" name="product_name" />
@@ -45,6 +45,10 @@
  <option value="2">Acoustic</option>
   </select>
       </div>
+      <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="file" id="image" name="image" accept="image/*">
+    </div>
       <div class="form-group">
         <button class="btn btn-primary" type="submit">Add Instrument</button>
       </div>

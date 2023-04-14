@@ -5,12 +5,13 @@ const newInstrument = async (event) => {
   const price = document.querySelector('#price').value.trim();
   const stock = document.querySelector('#stock').value.trim();
   const category_id = document.querySelector('#category_id').value;
+  const image = document.querySelector('#image').files[0];
 console.log(product_name, price, stock, category_id )
 
-  if (product_name && price && stock && category_id) {
+  if (product_name && price && stock && category_id, image) {
     const response = await fetch(`/api/instruments`, {
       method: 'POST',
-      body: JSON.stringify({ product_name, price, stock, category_id }),
+      body: JSON.stringify({ product_name, price, stock, category_id, image }),
       headers: { 'Content-Type': 'application/json' },
     });
     

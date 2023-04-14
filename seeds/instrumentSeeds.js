@@ -7,6 +7,7 @@ const instrumentData = [
         stock: 4,
         description: 'Based on the highly sought-after "Japanese Vintage" reissued Fender guitars from the 80s, the Fender JV Modified 60s Stratocaster is sure to please. Three vintage-style single-coil pickups yield classic Strat tones, but with a twist: a push-pull Tone 2 pot allows you to switch in the neck pickup in positions 1 and 2 for modded-Strat tones straight from the factory. Factor in an easy-playing Thick Soft V neck profile, a vintage-style tremolo, and vintage-style locking tuners, and the Fender JV Modified 60s Stratocaster brings "Japanese Vintage" mojo to a new generation of players.',
         category_id: 1,
+        image:""
     },
     {
         product_name: 'Fender Telecaster',
@@ -14,6 +15,7 @@ const instrumentData = [
         stock: 5,
         description:'The Fender American Vintage II 1951 Telecaster is a spot-on re-creation of the 51 Tele, which was the first electric guitar to roll off Fenders assembly line bearing the Telecaster name. Built from a slab of solid ash, this axe delivers a bright, sustaining acoustic tone, which is complemented by a set of year-specific Pure Vintage 51 Telecaster single-coil pickups. Youll be blown away by the substantial playability of the 51 Telecasters U-shaped hard-rock maple neck, while its vintage-radius fingerboard ensures inspiring, comfortable fretting. The American Vintage II 1951 Tele is chock-full of period-correct appointments, including knurled dome knobs, a 3-barrel bridge, vintage-style tuning machines, and an eye-grabbing nitrocellulose lacquer finish on the body and neck. The American Vintage II 1951 Telecaster represents an important piece of Fender history — its a must-have for every Tele connoisseur',
         category_id: 1,
+        image:""
     },
     {
         product_name: 'Fender Jazzmaster',
@@ -21,6 +23,7 @@ const instrumentData = [
         stock: 7,
         description: 'Blending classic single-coil guitar tones with modern player preferences, the Fender American Ultra Jazzmaster represents a performance-focused update to one of the most iconic electric guitars around. Two Fender Ultra Noiseless pickups deliver the classic chime and richness Jazzmaster fans love, while S1 switching gives you the ability to switch between series or parallel modes for even more sonic versatility. The Modern D neck profile with satin finish plays amazingly fast and smooth, sure to appeal to fans of modern, thinner neck profiles. Complete with a bound, compound-radius fretboard for fluid playability, the Fender American Ultra Jazzmaster is an outstanding example of the worlds favorite offset electric guitar.',
         category_id: 1,
+        image:""
     },
     {
         product_name: 'Ibanez J Custom RG8560',
@@ -28,6 +31,7 @@ const instrumentData = [
         stock: 4,
         description: 'Looks, tone, playability — the Ibanez RG8560 checks all the right boxes. Beautiful AAA flamed maple caps a resonant African mahogany body. Its 5-piece Super Wizard neck provides a just-right feel, while a J Custom fret edge treatment infuses its bound ebony fingerboard with the ultimate in smooth playability. DiMarzio Black Velvet pickups in a versatile HSS configuration exhibit everything from spanky single-coil bite to thick, full-throttle humbucker tones. A Lo-Pro Edge tremolo double-locking tremolo maintains perfect intonation while bending, twisting, and dive-bombing, while Gotoh tuning machines ensure rock-solid reliability. A member of Ibanez high-end J Custom line, the RG8560 features recessed control knobs and an eye-grabbing tree of life fingerboard inlay.',
         category_id: 1,
+        image:""
     },
     {
         product_name: 'Ibanez Standard S561',
