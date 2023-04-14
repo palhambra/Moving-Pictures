@@ -1,7 +1,13 @@
 const router = require('express').Router();
+const path = require('path')
 const { Instrument, Categories, User, Review } = require('../../models');
 const multer = require('multer');
-const upload = multer({ dest: './images'});
+const sharp = require('sharp');
+
+// const upload = multer({ dest: path.join(__dirname, '..', 'public', 'images') });
+const upload = multer({ dest: 'public/images' });
+
+const fs = require('fs');
 
 router.get('/', async (req, res) => {
  try {
@@ -9,6 +15,7 @@ router.get('/', async (req, res) => {
     include: [{model: Categories}, {model: Review, include: [User]}],
   });
   res.status(200).json(instrumentData)
+ 
  } catch (err) {
   res.status(500).json(err);
   console.log(err)
@@ -54,25 +61,77 @@ router.get('/:id', async (req, res) => {
 //     });
 // });
 
-router.post('/',  upload.single('image'), async (req, res) => {
-  try { console.log(req.body)
-    console.log(req.file)
-    const instrument = await Instrument.create({
+// router.post('/',  upload.single('image'), async (req, res) => {
+//   try { 
+//     console.log(req.body)
+//     console.log(req.file)
+//     const image = req.file.filename
+//     const instrument = await Instrument.create({
       
+//       product_name: req.body.product_name,
+//       price: req.body.price,
+//       stock: req.body.stock,
+//       category_id: req.body.category_id,
+//       image: req.file.filename,
+//     });
+
+//     const newPath = 'public/images/' + image;
+//     fs.renameSync(req.file.path, newPath)
+//     console.log(instrument)
+//     res.status(201).json(instrument);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ message: 'Server error' });
+//   }
+// });
+
+// router.post('/',  upload.single('image'), async (req, res) => {
+//   try { 
+//     console.log(req.body)
+//     console.log(req.file)
+//     const image = req.file.filename
+//     const imagePath = path.join(__dirname, '..', 'public', 'images', image);
+//     await sharp(req.file.path).jpeg().toFile(imagePath);
+//     const instrument = await Instrument.create({
+      
+//       product_name: req.body.product_name,
+//       price: req.body.price,
+//       stock: req.body.stock,
+//       category_id: req.body.category_id,
+//       image: req.file.filename,
+//     });
+
+//     const newPath = 'public/images/' + image;
+//     fs.renameSync(req.file.path, newPath)
+//     console.log(instrument)
+//     res.status(201).json(instrument);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ message: 'Server error' });
+//   }
+// });
+
+router.post('/', upload.single('image'), async (req, res) => {
+  try { 
+    const image = req.file.filename;
+    const instrument = await Instrument.create({
       product_name: req.body.product_name,
       price: req.body.price,
       stock: req.body.stock,
       category_id: req.body.category_id,
-      image: req.file.path,
+      image: image + '.jpg',
     });
-    console.log(instrument)
+
+    const oldPath = path.join(req.file.destination, req.file.filename);
+    const newPath = path.join(req.file.destination, image + '.jpg');
+    fs.renameSync(oldPath, newPath);
+    console.log(instrument);
     res.status(201).json(instrument);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
 });
-
 
 
 module.exports = router;

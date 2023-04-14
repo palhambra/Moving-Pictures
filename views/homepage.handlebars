@@ -34,7 +34,14 @@
 
 
 
-
+{{#each instruments}}
+  <div>
+    <h2>{{this.product_name}}</h2>
+    <p>Price: {{this.price}}</p>
+    <p>Stock: {{this.stock}}</p>
+    <img src="/images/{{this.image}}" alt="{{this.product_name}} Image" width="300" height="600">
+  </div>
+{{/each}}
 
 
 

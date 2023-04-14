@@ -40,7 +40,7 @@ Instrument.init(
             },
         },
         image: {
-            type: DataTypes.BLOB
+            type: DataTypes.STRING
     }
     },
     {
