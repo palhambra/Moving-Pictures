@@ -39,6 +39,9 @@ Instrument.init(
                 key: 'id',
             },
         },
+        image: {
+            type: DataTypes.BLOB
+    }
     },
     {
         sequelize,

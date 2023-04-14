@@ -1,0 +1,36 @@
+  <div class="col-md-6">
+    <h2>New Instrument</h2>
+
+    <form class="form new-instrument-form" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="product_name">Instrument:</label>
+        <input class="form-input" type="text" id="product_name" name="product_name" />
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input class="form-input" type="text" id="price" />
+      </div>
+      <div class="form-group">
+        <label for="stock">Stock:</label>
+        <input class="form-input" type="text" id="stock" name="stock" />
+      </div>
+      <div class="form-group">
+        
+        <label for="category_id">Category:</label>
+  <select id="category_id" name="category_id">
+  <option value="1">Electric</option>
+ <option value="2">Acoustic</option>
+  </select>
+      </div>
+      <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="file" id="image" name="image" accept="image/*">
+    </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Add Instrument</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+
+  <script src="/js/upload.js"></script>

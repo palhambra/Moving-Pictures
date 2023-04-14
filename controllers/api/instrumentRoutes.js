@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { Instrument, Categories, User, Review } = require('../../models');
+const multer = require('multer');
+const upload = multer({ dest: './images'});
 
 router.get('/', async (req, res) => {
  try {
@@ -32,24 +34,43 @@ router.get('/:id', async (req, res) => {
 });
 
 
-router.post('/', (req, res) => {
-  /* req.body should look like this...
-    {
-      instrument_name: "Guitar",
-      description: "A stringed musical instrument.",
-      price: 500.00,
-      stock: 5,
-      category_id: 1
-    }
-  */
-  Instrument.create(req.body)
-    .then((instrument) => {
-      res.status(200).json(instrument);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
+// router.post('/', (req, res) => {
+//   /* req.body should look like this...
+//     {
+//       instrument_name: "Guitar",
+//       description: "A stringed musical instrument.",
+//       price: 500.00,
+//       stock: 5,
+//       category_id: 1
+//     }
+//   */
+//   Instrument.create(req.body)
+//     .then((instrument) => {
+//       res.status(200).json(instrument);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(400).json(err);
+//     });
+// });
+
+router.post('/',  upload.single('image'), async (req, res) => {
+  try { console.log(req.body)
+    console.log(req.file)
+    const instrument = await Instrument.create({
+      
+      product_name: req.body.product_name,
+      price: req.body.price,
+      stock: req.body.stock,
+      category_id: req.body.category_id,
+      image: req.file.path,
     });
+    console.log(instrument)
+    res.status(201).json(instrument);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error' });
+  }
 });
 
 
