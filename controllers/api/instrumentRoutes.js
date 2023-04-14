@@ -70,6 +70,7 @@ router.post('/', upload.single('image'), async (req, res) => {
       product_name: req.body.product_name,
       price: req.body.price,
       stock: req.body.stock,
+      description: req.body.description,
       category_id: req.body.category_id,
       image: image + '.jpg',
     });

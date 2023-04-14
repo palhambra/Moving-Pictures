@@ -28,13 +28,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// router.get('/upload', (req, res) => {
-//   if (req.session.logged_in) {
-//     res.render('upload');
-//     return;
-//   }
-  
-// })
+
 
 router.get('/upload', async (req, res) => {
   if (req.session.logged_in) {
@@ -54,8 +48,23 @@ router.get('/upload', async (req, res) => {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
   }
+} else {
+  res.render('login', { message: 'You must be logged in to upload instruments' });
 }
 });
 
+router.get('/profile/:id', async (req, res) => {
+  try {
+    const instrumentData = await Instrument.findByPk(req.params.id);
+    if (!instrumentData) {
+      res.status(404).json({ message: 'Instrument not found' });
+      return;
+    }
+    const instrument = instrumentData.get({ plain: true });
+    res.render('profile', { ...instrument });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
