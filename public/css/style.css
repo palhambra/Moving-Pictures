@@ -1,0 +1,60 @@
+/* Element Selectors */
+body {
+    position: relative;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-size: 20px;
+    background-color: #655a54;
+    color: #fdf6f4;
+  }
+  style { 
+          background-image: url('https://wallpapers.com/images/high/electric-guitar-black-screen-4k-46wif16htbdaxv6a.webp');
+          background-size: cover;
+          background-repeat: no-repeat;
+         
+  }
+  header {
+      height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: #130202;
+  }
+  header {
+      position: fixed;
+      border-bottom: 10px solid #DDAF94;
+    }
+  
+    h1 {
+      margin: 20px;
+    }
+  
+    main {
+      padding: 60px 0;
+    }
+  
+    li {
+      display: inline;
+      padding: 0px 20px;
+      text-decoration: none;
+    }
+  
+    a {
+      text-decoration: none;
+      color: #FDF8F5;
+    }
+    
+    header {
+      position: fixed;
+      border-bottom: 10px solid #DDAF94;
+    }
+  
+    section {
+      margin-bottom: 0;
+      padding: 20px 10px 40px 10px;
+      border-top: 3px solid #DDAF94;
+      background-color:  #E8CEBF;
+    }
+  
+    /* Class Selectors */
+  .text-center {
+      text-align: center;
+    }
