@@ -11,22 +11,11 @@ Review.init(
       primaryKey: true,
       autoIncrement: true
     },
-    description: {
-      type: DataTypes.STRING,
+    comment: {
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [1]
-      }
-    },
-    rating: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    movie_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'movie',
-        key: 'id'
       }
     },
     user_id: {
@@ -36,6 +25,15 @@ Review.init(
         key: 'id'
       }
     },
+    instrument_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'instrument',
+        key: 'id'
+      }
+    }
+  }, 
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,

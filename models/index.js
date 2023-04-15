@@ -1,22 +1,9 @@
-const Movie = require('./Movie');
-const Television = require('./Television');
+const Instrument = require('./Instrument');
 const Categories = require('./Categories')
 const User = require('./User');
 const Review = require('./Review');
 
-Movie.belongsTo(User, {
-    foreignKey:'userId',
-});
 
-Television.hasMany(Categories, {
-    foreignKey: '',
-});
-
-Movie.belongsToMany(Categories,{
-    through: '',
-    as: '',
-    foreignKey: '',
-});
 
 User.hasMany(Review, {
     foreignKey: 'user_id',
@@ -27,17 +14,27 @@ Review.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-Movie.hasMany(Review, {
-    foreignKey: 'movie_id'
+
+
+Review.belongsTo(Instrument, {
+    foreignKey: 'instrument_id'
 });
 
-Review.belongsTo(Movie, {
-    foreignKey: 'movie_id'
+Instrument.hasMany(Review, {
+    foreignKey: 'instrument_id'
+});
+
+Instrument.belongsTo(Categories, {
+    foreignKey: 'category_id'
+})
+
+Categories.hasMany(Instrument, {
+    foreignKey: 'category_id'
 })
 
 module.exports = {
-    Movie,
-    Television,
+    Instrument,
+    Review,
     Categories,
     User,
 };

@@ -1,4 +1,4 @@
-const { Model,DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 // const { promises } = require('dns');
@@ -13,11 +13,7 @@ Categories.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name : {
-            type:DataTypes.STRING,
-            allowNull: false,
-        },
-        genre : {
+        category_name : {
             type:DataTypes.STRING,
             allowNull: false,
         },

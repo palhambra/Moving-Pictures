@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving Pictures</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Moving Pictures</title>
+   <style>
+        body {
+        background-image: url("https://wallpapers.com/images/high/electric-guitar-black-screen-4k-46wif16htbdaxv6a.webp");
+         background-repeat:no-repeat;
+         background-size:cover;
+        }
+    </style>
+</head>
+<body>  
+
+    <section>
+        <header>
+            <nav class="text-left">
+                <ul>
+                    <li>
+                        <a href="Acoustic"><strong>Acoustic</strong></a>
+                    </li>
+                    <li>
+                        <a href="Electric"><strong>Electric</strong></a>
+                    </li>
+                </ul>
+            </nav>
+     <aside>
+      <h1>Checkout some instruments!</h1>
+    </aside>
+            {{!-- <figcaption class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</figcaption>
+            </figure> --}}
+        </header>
+    </section>
+    <main>
+        <h2 class="text-center"><strong>Guitars</strong></h2>
+    </main>
+
+
+
+    
+
+
+<div class="card-deck">
+  {{#each instruments as |instrument|}}
+    <div class="col-lg-2 col-md-4 col-sm-6 mt-3 mb-3">
+      <div class="card">
+        <img class="card-img-top" src="/images/{{instrument.image}}" alt="{{instrument.product_name}} Image">
+        <div class="card-body">
+          <h5 class="card-title">{{instrument.product_name}}</h5>
+          <a href="/profile/{{instrument.id}}" class="btn btn-primary">View Instrument</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+
+</html>
