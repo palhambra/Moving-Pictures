@@ -67,4 +67,21 @@ router.get('/profile/:id', async (req, res) => {
   }
 });
 
+
+router.get('/:category_name', async (req, res) => {
+  try {
+    const categoryData = await Categories.findOne({
+      where: { category_name: req.params.category_name },
+      include: [{ model: Instrument }],
+    });
+    if (!categoryData) {
+      res.status(404).json({ message: 'Category not found' });
+      return;
+    }
+    const category = categoryData.get({ plain: true });
+    res.render('homepage', { ...category });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 module.exports = router;

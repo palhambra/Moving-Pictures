@@ -1,4 +1,5 @@
-  <div class="col-md-6">
+<div class="container">
+  <div class="col-md-1">
     <h2>New Instrument</h2>
 
     <form class="form new-instrument-form" enctype="multipart/form-data">
@@ -14,32 +15,29 @@
         <label for="stock">Stock:</label>
         <input class="form-input" type="text" id="stock" name="stock" />
       </div>
-      {{!-- <div class="form-group">
-        <label for="description">Description:</label>
-        <input class="form-input" type="text" id="description" name="description" />
-      </div> --}}
-      <div class="form-group">
-  <label for="description">Description:</label>
-  <textarea class="form-input" id="description" name="description" rows="4" cols="50"></textarea>
-</div>
 
       <div class="form-group">
-        
+        <label for="description">Description:</label>
+        <textarea class="form-input" id="description" name="description" rows="4" cols="50"></textarea>
+      </div>
+
+      <div class="form-group">
+
         <label for="category_id">Category:</label>
-  <select id="category_id" name="category_id">
-  <option value="1">Electric</option>
- <option value="2">Acoustic</option>
-  </select>
+        <select id="category_id" name="category_id">
+          <option value="1">Electric</option>
+          <option value="2">Acoustic</option>
+        </select>
       </div>
       <div class="form-group">
-      <label for="image">Image:</label>
-      <input type="file" id="image" name="image" accept="image/*">
-    </div>
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+      </div>
       <div class="form-group">
         <button class="btn btn-primary" type="submit">Add Instrument</button>
       </div>
     </form>
   </div>
-  <div class="col-md-6">
 
-  <script src="/js/upload.js"></script>
+</div>
+<script src="/js/upload.js"></script>

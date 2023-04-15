@@ -1,4 +1,4 @@
-/* Element Selectors */
+ /* Element Selectors*/
 body {
     position: relative;
     font-family: "Goudy Bookletter 1911", sans-serif;
@@ -19,7 +19,7 @@ body {
     background-color: #130202;
   }
   header {
-      position: fixed;
+      
       border-bottom: 10px solid #DDAF94;
     }
   
@@ -42,19 +42,20 @@ body {
       color: #FDF8F5;
     }
     
-    header {
-      position: fixed;
-      border-bottom: 10px solid #DDAF94;
-    }
+    
   
     section {
       margin-bottom: 0;
-      padding: 20px 10px 40px 10px;
+      padding: 20px 10px 20px 10px;
       border-top: 3px solid #DDAF94;
       background-color:  #E8CEBF;
+    } 
+
+    h5 {
+color: #130202;
     }
   
     /* Class Selectors */
-  .text-center {
+   .text-center {
       text-align: center;
-    }
+    } 

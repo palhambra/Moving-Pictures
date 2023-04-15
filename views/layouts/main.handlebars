@@ -7,26 +7,28 @@
   <title>Moving Picture</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+
+
 </head>
 
 <body>
   <header>
     <h1>Welcome!</h1>
   </header>
-  <nav>
+  <nav class ="text-right">
     <a href="/">Home</a>
     {{#if loggedIn}}
     <a href="/upload">Upload</a>
-    <button id="logout" class="btn-no-style">Logout</button>
+    <button id="logout" type="button" class="btn-warning">Logout</button>
     
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
   </nav>
   <main>
-    <aside>
-      <h2>Checkout some instruments!</h2>
-    </aside>
+   
     <div class="gallery">
       {{{body}}}
     </div>
