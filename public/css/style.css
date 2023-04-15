@@ -3,32 +3,35 @@ body {
     position: relative;
     font-family: "Goudy Bookletter 1911", sans-serif;
     font-size: 20px;
-    background-color: #655a54;
+    background-color: #130202;
     color: #fdf6f4;
   }
   style { 
-          background-image: url('https://wallpapers.com/images/high/electric-guitar-black-screen-4k-46wif16htbdaxv6a.webp');
+         /* background-image: url('https://wallpapers.com/images/high/electric-guitar-black-screen-4k-46wif16htbdaxv6a.webp');
           background-size: cover;
           background-repeat: no-repeat;
-         
+         */
+         background-color: #130202;
   }
   header {
-      height: 60px;
+    height: 60px;
     width: 100%;
     line-height: 60px;
     background-color: #130202;
   }
   header {
       
-      border-bottom: 10px solid #DDAF94;
+      border: 5px solid #DDAF94;
+      height: 90px;
     }
   
     h1 {
       margin: 20px;
+      text-align: center;
     }
   
     main {
-      padding: 60px 0;
+      padding: 10px 0;
     }
   
     li {
@@ -46,16 +49,53 @@ body {
   
     section {
       margin-bottom: 0;
-      padding: 20px 10px 20px 10px;
-      border-top: 3px solid #DDAF94;
-      background-color:  #E8CEBF;
+      /* padding: 20px 10px 20px 10px; */
+      /* border: 3px solid #DDAF94;
+      background-color:  #E8CEBF; */
     } 
 
     h5 {
 color: #130202;
     }
+
+
+aside h1 {
+    top: 50px;
+}
   
     /* Class Selectors */
    .text-center {
       text-align: center;
     } 
+
+
+.options  {
+    text-align: center;
+    left: 10px;
+}
+
+
+.inst-body {
+    background-color: #655a54;
+}
+
+.inst-display {
+  background-color: #130202;
+}
+
+.inst-img-name {
+ color: white;
+}
+
+.inst-psd {
+    color:#fdf6f4;
+    border: 2px solid #E8CEBF;
+    top: 40px;
+    right: 30px;
+    height: 500px;
+}
+
+.inst-psd p {
+    text-align: center;
+}
+
