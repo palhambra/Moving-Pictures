@@ -13,7 +13,8 @@
     "sharp": "^0.32.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/seeds.js"
   },
   "name": "moving-pictures",
   "description": "MVC Handlebars and MYSQL",
