@@ -15,13 +15,10 @@
     </style>
 </head>
 <body>  
-    <main>
-        <h1 class="text-center"><strong>Guitars</strong></h1>
-    </main>
 
     <section>
         <header>
-            <nav class="text-right">
+            <nav class="text-left">
                 <ul>
                     <li>
                         <a href="Acoustic"><strong>Acoustic</strong></a>
@@ -31,25 +28,36 @@
                     </li>
                 </ul>
             </nav>
-            <figcaption class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</figcaption>
-            </figure>
+     <aside>
+      <h1>Checkout some instruments!</h1>
+    </aside>
+            {{!-- <figcaption class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</figcaption>
+            </figure> --}}
         </header>
     </section>
+    <main>
+        <h2 class="text-center"><strong>Guitars</strong></h2>
+    </main>
 
 
 
     
 
 
-{{#each instruments as |instrument|}}
-  <div>
-    <h2>{{instrument.product_name}}</h2>
-       
-    <a href="/profile/{{instrument.id}}">
-      <img src="/images/{{instrument.image}}" alt="{{instrument.product_name}} Image" width="300" height="600">
-    </a>
-  </div>
-{{/each}}
+<div class="card-deck">
+  {{#each instruments as |instrument|}}
+    <div class="col-lg-2 col-md-4 col-sm-6 mt-3 mb-3">
+      <div class="card">
+        <img class="card-img-top" src="/images/{{instrument.image}}" alt="{{instrument.product_name}} Image">
+        <div class="card-body">
+          <h5 class="card-title">{{instrument.product_name}}</h5>
+          <a href="/profile/{{instrument.id}}" class="btn btn-primary">View Instrument</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
 
 
 
