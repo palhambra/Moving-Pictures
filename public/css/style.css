@@ -29,6 +29,10 @@ body {
       margin: 20px;
       text-align: center;
     }
+
+    h2 {
+      text-align: center;
+    }
   
     main {
       padding: 10px 0;
@@ -36,8 +40,10 @@ body {
   
     li {
       display: inline;
-      padding: 0px 20px;
+      padding: 0px 10px;
       text-decoration: none;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+      
     }
   
     a {
@@ -45,8 +51,44 @@ body {
       color: #FDF8F5;
     }
     
+    a:hover {
+        color: #DDAF94;
+        text-decoration: underline;  
+        text-decoration-color: #655a54;
+        transition: 0.2s ease-in;
+    }
+
+.btn-primary {
+    color:#E8CEBF;
+    background-color: #130202;
+    border-color:#130202;
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     
-  
+}
+
+.btn-primary:hover {
+    background-color: #DDAF94;
+    color:#130202;
+    border-color:#DDAF94;
+}
+
+.card-body {
+    background-color: #655a54;
+    color: #fdf6f4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.card-title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
     section {
       margin-bottom: 0;
       /* padding: 20px 10px 20px 10px; */
@@ -55,7 +97,7 @@ body {
     } 
 
     h5 {
-color: #130202;
+      color: #130202;
     }
 
 
@@ -76,7 +118,7 @@ aside h1 {
 
 
 .inst-body {
-    background-color: #655a54;
+   display: flex;
 }
 
 .inst-display {
@@ -87,15 +129,26 @@ aside h1 {
  color: white;
 }
 
+.inst-img-name h2 {
+    position: relative;
+    text-align: start;
+    
+}
+
 .inst-psd {
     color:#fdf6f4;
     border: 2px solid #E8CEBF;
-    top: 40px;
     right: 30px;
-    height: 500px;
+    border-radius: 10px;
+    background-color: #655a54;
+    
 }
 
 .inst-psd p {
     text-align: center;
 }
 
+
+.log-sign {
+    display: inline-block;
+}
