@@ -43,7 +43,11 @@ router.get('/upload', async (req, res) => {
     });
     const instruments = instrumentData.map((instrument) => instrument.get({ plain:true }));
 
-    res.render('upload', { instruments });
+    
+    res.render('upload', {
+      instruments,
+      loggedIn: req.session.logged_in
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Server error' });
@@ -61,7 +65,8 @@ router.get('/profile/:id', async (req, res) => {
       return;
     }
     const instrument = instrumentData.get({ plain: true });
-    res.render('profile', { ...instrument });
+    res.render('profile', { ...instrument,
+      loggedIn: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -79,7 +84,8 @@ router.get('/:category_name', async (req, res) => {
       return;
     }
     const category = categoryData.get({ plain: true });
-    res.render('homepage', { ...category });
+    res.render('homepage', { ...category,
+      loggedIn: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
