@@ -152,3 +152,14 @@ aside h1 {
 .log-sign {
     display: inline-block;
 }
+
+
+.signup {
+  color:#fdf6f4;
+  border: 2px solid #E8CEBF;
+  right: 30px;
+  border-radius: 10px;
+  background-color: #655a54;
+  justify-content: center;
+  
+}
