@@ -149,6 +149,40 @@ aside h1 {
 }
 
 
+
+.form-input {
+    align-items: flex-end;
+}
+
 .log-sign {
+   display: flex;
+   justify-content: center;
+   margin-left: 20%;
+   
+}
+
+.login-form {
+    display: inline-block;
+    justify-content: center;
+}
+
+.login-page {
+    display: inline-flex;
+    margin-left:0;
+}
+
+.btn-log {
+    justify-content: center;
+    display: inline-flex;
+    text-align: right;
+}
+
+.btn-sign {
+    justify-content: center;
+    display:inline-flex;
+}
+
+.signup-form {
+    justify-content: center;
     display: inline-block;
 }
